@@ -6,6 +6,6 @@ TEST(identifiers, identifier_entry) {
         IdentifierGroup group{value};
         group.increase();
 
-        return group.get_value();
+        return group.getValue();
     }("A1-B2-C3"));
 }

@@ -15,10 +15,10 @@ TEST(identifiers, first_char_identifier) {
 
             auto value = id.getValue();
 
-            EXPECT_FALSE(test_instance::is_denied_char(i));
+            EXPECT_FALSE(TestInstance::isDeniedChar(i));
             EXPECT_EQ('1', value[1]);
         } catch (InvalidIdentifier&) {
-            EXPECT_TRUE(test_instance::is_denied_char(i));
+            EXPECT_TRUE(TestInstance::isDeniedChar(i));
         }
     }
 }

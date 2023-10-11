@@ -15,15 +15,15 @@ TEST(identifiers, firsts_char_single_identifier_group) {
 
             auto str = id.getValue();
 
-            EXPECT_FALSE(test_instance::is_denied_char(i));
+            EXPECT_FALSE(TestInstance::isDeniedChar(i));
             EXPECT_EQ('1', str[1]);
         } catch (InvalidIdentifier&) {
-            EXPECT_TRUE(test_instance::is_denied_char(i));
+            EXPECT_TRUE(TestInstance::isDeniedChar(i));
         }
     }
     Identifier id{"Z9"};
-    EXPECT_EQ("Z9", id.get_value());
+    EXPECT_EQ("Z9", id.getValue());
 
     id.increase();
-    EXPECT_EQ("A1", id.get_value());
+    EXPECT_EQ("A1", id.getValue());
 }

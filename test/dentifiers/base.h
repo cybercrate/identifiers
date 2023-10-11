@@ -4,9 +4,8 @@
 #include <algorithm>
 #include <string>
 
-struct test_instance {
-    static bool is_denied_char(char letter)
-    {
+struct TestInstance {
+    static bool isDeniedChar(char letter) {
         std::string denied_letters{"DFGJMQV0"};
         auto upper = static_cast<char>(std::toupper(letter));
 
